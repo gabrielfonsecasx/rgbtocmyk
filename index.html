@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to CMYK converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        @font-face {
+            font-family: 'copa';
+            src: url(../fonte/Football\ PERSONAL\ USE\ ONLY!.ttf) format(truetype);
+        }
+        :root{
+            --cor01: #bac7ce;
+            --cor02: black;
+            --cor03: white;
+            --cor04: #dce2e5;
+
+            --fonte01: Verdana, arial, sans-serif;
+            --fonte02: 'copa', serif;
+        }
+        header{
+            background-color: var(--cor01);
+            padding: 10px;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+        }
+        header a{
+            color: var(--cor03);
+            text-decoration: none;
+            margin: 10px;
+        }
+        header a#lang{
+            display: flex;
+            gap: 20px;
+        }
+        header a:hover{
+            color: var(--cor02);
+        }
+        main{
+            max-width: 700px;
+            margin: auto;
+        }
+        img{
+            margin: 30px 30px 2px 2px;
+            width: 50%
+        }
+        article.logo h4{
+            margin: 0px 30px 30px 2px;
+            font-weight: normal;
+        }
+        div{
+            margin-bottom: 30px;
+            min-height: 200px;
+            background-color: var(--cor04);
+            padding: 20px;
+        }
+        article.tit p{
+            margin: 10px 10px 10px 2px;
+            text-indent: 20px;
+        }
+        article.tit h2{
+            margin: 10px;
+        }
+        main h3{
+            margin: 20px;
+        }
+        body{
+            font-family: var(--fonte01);
+        }
+        aside{
+            margin: 200px 10px;
+        }
+        aside a{
+            text-decoration: underline;
+        }
+        aside p{
+            color: red;
+        }
+        footer{
+            margin-top: 100px;
+            background-color: var(--cor02);
+            text-align: center;
+            color: var(--cor03);
+            font-size: 0.8em;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+        <a href="#">Donate</a>
+
+        <a href="#" id="lang">EN</a>
+        <a href="#" id="lang">PT</a>
+    </header>
+    <main>
+        <article class="logo">
+            <picture>
+                <img src="logo.png" alt="logo-png">
+            </picture>
+            <h4>Convert all images in a PDF from RGB to CMYK.</h4>
+        </article>
+        <article class="tit">
+            <div>
+                <h2>Welcome to the PDF to CMYK converter</h2>
+                <p>With this free online tool you can convert a PDF from RGB to CMYK colorspace.
+        Please note that we will convert all images to 300dpi during this process.</p>
+            </div>
+        </article>
+        <article>
+            <h3 style="display: inline;"> Upload a file:</h3> 
+            <button class="botao-estilizado">Clique aqui</button>
+            <br>
+            <h3 style="display: inline;">Or enter a URL:</h3>
+            <input type="text">
+            <p style="font-size: 10px; margin-left: 207px;">Max. file size for upload is 20 MB. Supported file types: pdf.</p> <br>
+            <h3 style="display: inline;">Select CMYK profile:</h3> <input type="text">
+            <p style="font-size: 10px; margin-left: 256px;">If you are not sure which profile you should use, choose the default profile.</p>
+            
+        </article>
+        <aside>
+            <p>New: <a href="#">Free Image to Text Converter</a></p>
+        </aside>
+    </main>
+    <footer>
+        Website Created by Gabriel Fonseca
+    </footer>
+</body>
+</html>
